@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180212 12:00:35.522" generator="Robot 3.0.2 (Python 2.7.13 on win32)">
+<suite source="C:\pythonprojects\testproj\Robottests\test1.robot" id="s1" name="Test1">
+<test id="s1-t1" name="sample test case">
+<kw name="test1">
+<kw name="Hello" library="rbtest">
+<arguments>
+<arg>${user}</arg>
+</arguments>
+<msg timestamp="20180212 12:01:15.631" level="INFO">Hello "Harsha"</msg>
+<status status="PASS" endtime="20180212 12:01:15.631" starttime="20180212 12:01:15.630"></status>
+</kw>
+<status status="PASS" endtime="20180212 12:01:15.631" starttime="20180212 12:01:15.629"></status>
+</kw>
+<status status="PASS" endtime="20180212 12:01:15.693" critical="yes" starttime="20180212 12:01:15.628"></status>
+</test>
+<test id="s1-t2" name="For-Loop-In-Range">
+<kw type="for" name="${INDEX} IN RANGE [ 1 | 3 ]">
+<kw type="foritem" name="${INDEX} = 1">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${INDEX}</arg>
+</arguments>
+<msg timestamp="20180212 12:01:15.698" level="INFO">1</msg>
+<status status="PASS" endtime="20180212 12:01:15.698" starttime="20180212 12:01:15.697"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>${INDEX}</arg>
+</arguments>
+<assign>
+<var>${RANDOM_STRING}</var>
+</assign>
+<msg timestamp="20180212 12:01:15.699" level="INFO">${RANDOM_STRING} = Y</msg>
+<status status="PASS" endtime="20180212 12:01:15.699" starttime="20180212 12:01:15.698"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${RANDOM_STRING}</arg>
+</arguments>
+<msg timestamp="20180212 12:01:15.701" level="INFO">Y</msg>
+<status status="PASS" endtime="20180212 12:01:15.701" starttime="20180212 12:01:15.700"></status>
+</kw>
+<status status="PASS" endtime="20180212 12:01:15.701" starttime="20180212 12:01:15.697"></status>
+</kw>
+<kw type="foritem" name="${INDEX} = 2">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${INDEX}</arg>
+</arguments>
+<msg timestamp="20180212 12:01:15.703" level="INFO">2</msg>
+<status status="PASS" endtime="20180212 12:01:15.703" starttime="20180212 12:01:15.702"></status>
+</kw>
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>${INDEX}</arg>
+</arguments>
+<assign>
+<var>${RANDOM_STRING}</var>
+</assign>
+<msg timestamp="20180212 12:01:15.705" level="INFO">${RANDOM_STRING} = aS</msg>
+<status status="PASS" endtime="20180212 12:01:15.705" starttime="20180212 12:01:15.704"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${RANDOM_STRING}</arg>
+</arguments>
+<msg timestamp="20180212 12:01:15.706" level="INFO">aS</msg>
+<status status="PASS" endtime="20180212 12:01:15.706" starttime="20180212 12:01:15.705"></status>
+</kw>
+<status status="PASS" endtime="20180212 12:01:15.706" starttime="20180212 12:01:15.702"></status>
+</kw>
+<status status="PASS" endtime="20180212 12:01:15.706" starttime="20180212 12:01:15.696"></status>
+</kw>
+<status status="PASS" endtime="20180212 12:01:15.707" critical="yes" starttime="20180212 12:01:15.695"></status>
+</test>
+<test id="s1-t3" name="For-Loop-Elements">
+<kw name="Create List" library="BuiltIn">
+<doc>Returns a list containing given items.</doc>
+<arguments>
+<arg>Star Trek</arg>
+<arg>Star Wars</arg>
+<arg>Perry Rhodan</arg>
+</arguments>
+<assign>
+<var>@{ITEMS}</var>
+</assign>
+<msg timestamp="20180212 12:01:15.710" level="INFO">@{ITEMS} = [ Star Trek | Star Wars | Perry Rhodan ]</msg>
+<status status="PASS" endtime="20180212 12:01:15.710" starttime="20180212 12:01:15.709"></status>
+</kw>
+<kw type="for" name="${ELEMENT} IN [ @{ITEMS} ]">
+<kw type="foritem" name="${ELEMENT} = Star Trek">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${ELEMENT}</arg>
+</arguments>
+<msg timestamp="20180212 12:01:15.711" level="INFO">Star Trek</msg>
+<status status="PASS" endtime="20180212 12:01:15.712" starttime="20180212 12:01:15.711"></status>
+</kw>
+<kw name="Replace String" library="String">
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<arguments>
+<arg>${ELEMENT}</arg>
+<arg>${SPACE}</arg>
+<arg>${EMPTY}</arg>
+</arguments>
+<assign>
+<var>${ELEMENT}</var>
+</assign>
+<msg timestamp="20180212 12:01:15.713" level="INFO">${ELEMENT} = StarTrek</msg>
+<status status="PASS" endtime="20180212 12:01:15.713" starttime="20180212 12:01:15.712"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${ELEMENT}</arg>
+</arguments>
+<msg timestamp="20180212 12:01:15.714" level="INFO">StarTrek</msg>
+<status status="PASS" endtime="20180212 12:01:15.714" starttime="20180212 12:01:15.713"></status>
+</kw>
+<status status="PASS" endtime="20180212 12:01:15.714" starttime="20180212 12:01:15.711"></status>
+</kw>
+<kw type="foritem" name="${ELEMENT} = Star Wars">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${ELEMENT}</arg>
+</arguments>
+<msg timestamp="20180212 12:01:15.715" level="INFO">Star Wars</msg>
+<status status="PASS" endtime="20180212 12:01:15.715" starttime="20180212 12:01:15.714"></status>
+</kw>
+<kw name="Replace String" library="String">
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<arguments>
+<arg>${ELEMENT}</arg>
+<arg>${SPACE}</arg>
+<arg>${EMPTY}</arg>
+</arguments>
+<assign>
+<var>${ELEMENT}</var>
+</assign>
+<msg timestamp="20180212 12:01:15.716" level="INFO">${ELEMENT} = StarWars</msg>
+<status status="PASS" endtime="20180212 12:01:15.716" starttime="20180212 12:01:15.715"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${ELEMENT}</arg>
+</arguments>
+<msg timestamp="20180212 12:01:15.716" level="INFO">StarWars</msg>
+<status status="PASS" endtime="20180212 12:01:15.716" starttime="20180212 12:01:15.716"></status>
+</kw>
+<status status="PASS" endtime="20180212 12:01:15.716" starttime="20180212 12:01:15.714"></status>
+</kw>
+<kw type="foritem" name="${ELEMENT} = Perry Rhodan">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${ELEMENT}</arg>
+</arguments>
+<msg timestamp="20180212 12:01:15.717" level="INFO">Perry Rhodan</msg>
+<status status="PASS" endtime="20180212 12:01:15.717" starttime="20180212 12:01:15.716"></status>
+</kw>
+<kw name="Replace String" library="String">
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<arguments>
+<arg>${ELEMENT}</arg>
+<arg>${SPACE}</arg>
+<arg>${EMPTY}</arg>
+</arguments>
+<assign>
+<var>${ELEMENT}</var>
+</assign>
+<msg timestamp="20180212 12:01:15.717" level="INFO">${ELEMENT} = PerryRhodan</msg>
+<status status="PASS" endtime="20180212 12:01:15.718" starttime="20180212 12:01:15.717"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${ELEMENT}</arg>
+</arguments>
+<msg timestamp="20180212 12:01:15.718" level="INFO">PerryRhodan</msg>
+<status status="PASS" endtime="20180212 12:01:15.718" starttime="20180212 12:01:15.718"></status>
+</kw>
+<status status="PASS" endtime="20180212 12:01:15.718" starttime="20180212 12:01:15.716"></status>
+</kw>
+<status status="PASS" endtime="20180212 12:01:15.718" starttime="20180212 12:01:15.710"></status>
+</kw>
+<status status="PASS" endtime="20180212 12:01:15.719" critical="yes" starttime="20180212 12:01:15.708"></status>
+</test>
+<test id="s1-t4" name="For-Loop-Exiting">
+<kw name="Create List" library="BuiltIn">
+<doc>Returns a list containing given items.</doc>
+<arguments>
+<arg>Good Element 1</arg>
+<arg>Break On Me</arg>
+<arg>Good Element 2</arg>
+</arguments>
+<assign>
+<var>@{ITEMS}</var>
+</assign>
+<msg timestamp="20180212 12:01:15.723" level="INFO">@{ITEMS} = [ Good Element 1 | Break On Me | Good Element 2 ]</msg>
+<status status="PASS" endtime="20180212 12:01:15.723" starttime="20180212 12:01:15.722"></status>
+</kw>
+<kw type="for" name="${ELEMENT} IN [ @{ITEMS} ]">
+<kw type="foritem" name="${ELEMENT} = Good Element 1">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${ELEMENT}</arg>
+</arguments>
+<msg timestamp="20180212 12:01:15.725" level="INFO">Good Element 1</msg>
+<status status="PASS" endtime="20180212 12:01:15.725" starttime="20180212 12:01:15.724"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${ELEMENT}' == 'Break On Me'</arg>
+<arg>Exit For Loop</arg>
+</arguments>
+<status status="PASS" endtime="20180212 12:01:15.726" starttime="20180212 12:01:15.725"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Do more actions here ...</arg>
+</arguments>
+<msg timestamp="20180212 12:01:15.726" level="INFO">Do more actions here ...</msg>
+<status status="PASS" endtime="20180212 12:01:15.726" starttime="20180212 12:01:15.726"></status>
+</kw>
+<status status="PASS" endtime="20180212 12:01:15.727" starttime="20180212 12:01:15.724"></status>
+</kw>
+<kw type="foritem" name="${ELEMENT} = Break On Me">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${ELEMENT}</arg>
+</arguments>
+<msg timestamp="20180212 12:01:15.727" level="INFO">Break On Me</msg>
+<status status="PASS" endtime="20180212 12:01:15.728" starttime="20180212 12:01:15.727"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${ELEMENT}' == 'Break On Me'</arg>
+<arg>Exit For Loop</arg>
+</arguments>
+<kw name="Exit For Loop" library="BuiltIn">
+<doc>Stops executing the enclosing for loop.</doc>
+<msg timestamp="20180212 12:01:15.729" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" endtime="20180212 12:01:15.729" starttime="20180212 12:01:15.729"></status>
+</kw>
+<status status="PASS" endtime="20180212 12:01:15.729" starttime="20180212 12:01:15.728"></status>
+</kw>
+<status status="PASS" endtime="20180212 12:01:15.730" starttime="20180212 12:01:15.727"></status>
+</kw>
+<status status="PASS" endtime="20180212 12:01:15.730" starttime="20180212 12:01:15.724"></status>
+</kw>
+<status status="PASS" endtime="20180212 12:01:15.730" critical="yes" starttime="20180212 12:01:15.720"></status>
+</test>
+<test id="s1-t5" name="Repeat-Action">
+<kw name="Repeat Keyword" library="BuiltIn">
+<doc>Executes the specified keyword multiple times.</doc>
+<arguments>
+<arg>2</arg>
+<arg>Log</arg>
+<arg>Repeating this ...</arg>
+</arguments>
+<msg timestamp="20180212 12:01:15.732" level="INFO">Repeating keyword, round 1/2.</msg>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Repeating this ...</arg>
+</arguments>
+<msg timestamp="20180212 12:01:15.733" level="INFO">Repeating this ...</msg>
+<status status="PASS" endtime="20180212 12:01:15.733" starttime="20180212 12:01:15.733"></status>
+</kw>
+<msg timestamp="20180212 12:01:15.733" level="INFO">Repeating keyword, round 2/2.</msg>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Repeating this ...</arg>
+</arguments>
+<msg timestamp="20180212 12:01:15.733" level="INFO">Repeating this ...</msg>
+<status status="PASS" endtime="20180212 12:01:15.733" starttime="20180212 12:01:15.733"></status>
+</kw>
+<status status="PASS" endtime="20180212 12:01:15.733" starttime="20180212 12:01:15.732"></status>
+</kw>
+<status status="PASS" endtime="20180212 12:01:15.734" critical="yes" starttime="20180212 12:01:15.731"></status>
+</test>
+<test id="s1-t6" name="Run-Keyword">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>Log</arg>
+</arguments>
+<assign>
+<var>${MY_KEYWORD}</var>
+</assign>
+<msg timestamp="20180212 12:01:15.736" level="INFO">${MY_KEYWORD} = Log</msg>
+<status status="PASS" endtime="20180212 12:01:15.736" starttime="20180212 12:01:15.736"></status>
+</kw>
+<kw name="Run Keyword" library="BuiltIn">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>${MY_KEYWORD}</arg>
+<arg>Test</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Test</arg>
+</arguments>
+<msg timestamp="20180212 12:01:15.737" level="INFO">Test</msg>
+<status status="PASS" endtime="20180212 12:01:15.737" starttime="20180212 12:01:15.737"></status>
+</kw>
+<status status="PASS" endtime="20180212 12:01:15.737" starttime="20180212 12:01:15.736"></status>
+</kw>
+<status status="PASS" endtime="20180212 12:01:15.738" critical="yes" starttime="20180212 12:01:15.735"></status>
+</test>
+<test id="s1-t7" name="Run-Keyword-If">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>V1</arg>
+</arguments>
+<assign>
+<var>${TYPE}</var>
+</assign>
+<msg timestamp="20180212 12:01:15.740" level="INFO">${TYPE} = V1</msg>
+<status status="PASS" endtime="20180212 12:01:15.740" starttime="20180212 12:01:15.740"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${TYPE}' == 'V1'</arg>
+<arg>Log</arg>
+<arg>Testing Variant 1</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Testing Variant 1</arg>
+</arguments>
+<msg timestamp="20180212 12:01:15.741" level="INFO">Testing Variant 1</msg>
+<status status="PASS" endtime="20180212 12:01:15.742" starttime="20180212 12:01:15.741"></status>
+</kw>
+<status status="PASS" endtime="20180212 12:01:15.742" starttime="20180212 12:01:15.741"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${TYPE}' == 'V2'</arg>
+<arg>Log</arg>
+<arg>Testing Variant 2</arg>
+</arguments>
+<status status="PASS" endtime="20180212 12:01:15.742" starttime="20180212 12:01:15.742"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${TYPE}' == 'V3'</arg>
+<arg>Log</arg>
+<arg>Testing Variant 3</arg>
+</arguments>
+<status status="PASS" endtime="20180212 12:01:15.744" starttime="20180212 12:01:15.743"></status>
+</kw>
+<status status="PASS" endtime="20180212 12:01:15.744" critical="yes" starttime="20180212 12:01:15.739"></status>
+</test>
+<test id="s1-t8" name="Run-Keyword-Ignore-Error">
+<kw name="Create List" library="BuiltIn">
+<doc>Returns a list containing given items.</doc>
+<arguments>
+<arg>Picard</arg>
+<arg>Kirk</arg>
+<arg>Archer</arg>
+</arguments>
+<assign>
+<var>@{CAPTAINS}</var>
+</assign>
+<msg timestamp="20180212 12:01:15.748" level="INFO">@{CAPTAINS} = [ Picard | Kirk | Archer ]</msg>
+<status status="PASS" endtime="20180212 12:01:15.748" starttime="20180212 12:01:15.747"></status>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>Should Be Empty</arg>
+<arg>${CAPTAINS}</arg>
+</arguments>
+<kw name="Should Be Empty" library="BuiltIn">
+<doc>Verifies that the given item is empty.</doc>
+<arguments>
+<arg>${CAPTAINS}</arg>
+</arguments>
+<msg timestamp="20180212 12:01:15.750" level="INFO">Length is 3</msg>
+<msg timestamp="20180212 12:01:15.750" level="FAIL">'[u'Picard', u'Kirk', u'Archer']' should be empty.</msg>
+<status status="FAIL" endtime="20180212 12:01:15.750" starttime="20180212 12:01:15.749"></status>
+</kw>
+<status status="PASS" endtime="20180212 12:01:15.751" starttime="20180212 12:01:15.748"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Reached this point despite of error</arg>
+</arguments>
+<msg timestamp="20180212 12:01:15.751" level="INFO">Reached this point despite of error</msg>
+<status status="PASS" endtime="20180212 12:01:15.752" starttime="20180212 12:01:15.751"></status>
+</kw>
+<status status="PASS" endtime="20180212 12:01:15.752" critical="yes" starttime="20180212 12:01:15.746"></status>
+</test>
+<test id="s1-t9" name="StringsAndLists">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>"Test Value"</arg>
+</arguments>
+<assign>
+<var>${SOME_VALUE}</var>
+</assign>
+<msg timestamp="20180212 12:01:15.755" level="INFO">${SOME_VALUE} = "Test Value"</msg>
+<status status="PASS" endtime="20180212 12:01:15.755" starttime="20180212 12:01:15.755"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${SOME_VALUE}</arg>
+</arguments>
+<msg timestamp="20180212 12:01:15.756" level="INFO">"Test Value"</msg>
+<status status="PASS" endtime="20180212 12:01:15.756" starttime="20180212 12:01:15.756"></status>
+</kw>
+<kw name="Split String" library="String">
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<arguments>
+<arg>${SOME_VALUE}</arg>
+<arg>${SPACE}</arg>
+</arguments>
+<assign>
+<var>@{WORDS}</var>
+</assign>
+<msg timestamp="20180212 12:01:15.758" level="INFO">@{WORDS} = [ "Test | Value" ]</msg>
+<status status="PASS" endtime="20180212 12:01:15.758" starttime="20180212 12:01:15.757"></status>
+</kw>
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${WORDS}</arg>
+<arg>0</arg>
+</arguments>
+<assign>
+<var>${FIRST}</var>
+</assign>
+<msg timestamp="20180212 12:01:15.758" level="INFO">${FIRST} = "Test</msg>
+<status status="PASS" endtime="20180212 12:01:15.758" starttime="20180212 12:01:15.758"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${FIRST}</arg>
+</arguments>
+<msg timestamp="20180212 12:01:15.759" level="INFO">"Test</msg>
+<status status="PASS" endtime="20180212 12:01:15.759" starttime="20180212 12:01:15.759"></status>
+</kw>
+<status status="PASS" endtime="20180212 12:01:15.760" critical="yes" starttime="20180212 12:01:15.753"></status>
+</test>
+<status status="PASS" endtime="20180212 12:01:15.762" starttime="20180212 12:00:35.542"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="9">Critical Tests</stat>
+<stat fail="0" pass="9">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Test1" pass="9">Test1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

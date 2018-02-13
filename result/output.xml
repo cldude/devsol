@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180207 18:01:50.001" generator="Robot 3.0.2 (Python 2.7.13 on win32)">
+<suite source="C:\pythonprojects\testproj\Robottests\rtest.robot" id="s1" name="Rtest">
+<test id="s1-t1" name="Login of an existing customer">
+<kw type="setup" name="Open a browser to Super Website 2000!">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${ROOT}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20180207 18:01:50.141" level="INFO">Opening browser 'chrome' to base url 'http://www.dcu.org'.</msg>
+<status status="PASS" endtime="20180207 18:02:05.968" starttime="20180207 18:01:50.141"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>20s</arg>
+</arguments>
+<msg timestamp="20180207 18:02:25.971" level="INFO">Slept 20 seconds</msg>
+<status status="PASS" endtime="20180207 18:02:25.971" starttime="20180207 18:02:05.968"></status>
+</kw>
+<status status="PASS" endtime="20180207 18:02:25.971" starttime="20180207 18:01:50.141"></status>
+</kw>
+<kw name="Enter a valid username">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>id=userid</arg>
+</arguments>
+<status status="PASS" endtime="20180207 18:02:26.049" starttime="20180207 18:02:25.971"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=userid</arg>
+<arg>5233108</arg>
+</arguments>
+<msg timestamp="20180207 18:02:26.049" level="INFO">Typing text '5233108' into text field 'id=userid'.</msg>
+<status status="PASS" endtime="20180207 18:02:26.126" starttime="20180207 18:02:26.049"></status>
+</kw>
+<status status="PASS" endtime="20180207 18:02:26.126" starttime="20180207 18:02:25.971"></status>
+</kw>
+<kw name="Enter a valid password">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>id=password</arg>
+</arguments>
+<status status="PASS" endtime="20180207 18:02:26.173" starttime="20180207 18:02:26.126"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=password</arg>
+<arg>Thoku1234!</arg>
+</arguments>
+<msg timestamp="20180207 18:02:26.174" level="INFO">Typing text 'Thoku1234!' into text field 'id=password'.</msg>
+<status status="PASS" endtime="20180207 18:02:26.248" starttime="20180207 18:02:26.173"></status>
+</kw>
+<status status="PASS" endtime="20180207 18:02:26.248" starttime="20180207 18:02:26.126"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>id=submitBtn</arg>
+</arguments>
+<msg timestamp="20180207 18:02:26.248" level="INFO">Clicking button 'id=submitBtn'.</msg>
+<status status="PASS" endtime="20180207 18:02:28.673" starttime="20180207 18:02:26.248"></status>
+</kw>
+<kw type="teardown" name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20180207 18:02:31.876" starttime="20180207 18:02:28.674"></status>
+</kw>
+<status status="PASS" endtime="20180207 18:02:31.876" critical="yes" starttime="20180207 18:01:50.141"></status>
+</test>
+<test id="s1-t2" name="Open Close Browser Again">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>http://bbcnews.com</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20180207 18:02:31.876" level="INFO">Opening browser 'chrome' to base url 'http://bbcnews.com'.</msg>
+<status status="PASS" endtime="20180207 18:02:41.939" starttime="20180207 18:02:31.876"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20180207 18:02:45.089" starttime="20180207 18:02:41.940"></status>
+</kw>
+<status status="PASS" endtime="20180207 18:02:45.089" critical="yes" starttime="20180207 18:02:31.876"></status>
+</test>
+<status status="PASS" endtime="20180207 18:02:45.089" starttime="20180207 18:01:50.016"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="2">Critical Tests</stat>
+<stat fail="0" pass="2">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Rtest" pass="2">Rtest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
